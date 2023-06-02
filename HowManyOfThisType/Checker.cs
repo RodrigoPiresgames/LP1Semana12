@@ -1,19 +1,22 @@
 ﻿using System;
 
-public static class Class1
+namespace HowManyOfThisType
 {
-    public static int HowManyOfThisType<T>(IEnumerable<object> items)
+    public static class Class1
     {
-
-        private int count;
-
-        foreach (object o in items)
+        public static int HowManyOfThisType<T>(IEnumerable<object> items)
         {
-            if ( o is T)
-                count++;
+
+            private int count;
+
+            foreach (object o in items)
+            {
+                if ( o is T)
+                    count++;
+            }
+
+            return count++;
         }
 
-        return count++;
     }
-
 }
